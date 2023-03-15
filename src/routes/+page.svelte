@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/dragDiv/demo.svelte";
+  import Demo from "$lib/clickOutside/demo.svelte";
 
 </script>
 
