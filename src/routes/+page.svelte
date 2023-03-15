@@ -1,6 +1,10 @@
 <script>
-  import Demo from "$lib/useMouse/demo.svelte";
+  import Demo from "$lib/dragDiv/demo.svelte";
 
 </script>
 
 <Demo />
+
+<style lang="postcss">
+
+</style>

@@ -1,5 +1,5 @@
 <script>
-  import { useMouse } from "./useMouse";
+  import { useMouse } from "./index";
 
   let { x, y } = useMouse();
 </script>
