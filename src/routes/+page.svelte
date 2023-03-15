@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/clickOutside/demo.svelte";
+  import Demo from "$lib/sound/demo.svelte";
 
 </script>
 
