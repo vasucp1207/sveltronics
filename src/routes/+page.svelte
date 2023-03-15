@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/sound/demo.svelte";
+  import Demo from "$lib/resize/demo.svelte";
 
 </script>
 
