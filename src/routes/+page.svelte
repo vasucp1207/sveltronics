@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/resize/demo.svelte";
+  import Demo from "$lib/localStorage/demo.svelte";
 
 </script>
 
