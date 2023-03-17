@@ -1,7 +1,8 @@
 import { writable } from 'svelte/store';
 
-export function useLocalStorage(key, initialValue) {
-  let storeValue;
+type ValueType = string | number | boolean | null | undefined | object | any[];
+export function useLocalStorage<T extends ValueType>(key: string, initialValue: T): { subscribe: any; set: (value: T) => void; update: (fn: (value: T) => T) => void } {
+  let storeValue: T;
 
   try {
     const currentValue = localStorage.getItem(key);
@@ -11,7 +12,7 @@ export function useLocalStorage(key, initialValue) {
     storeValue = initialValue;
   }
 
-  const store = writable(storeValue);
+  const store = writable<T>(storeValue);
 
   store.subscribe((value) => {
     try {
