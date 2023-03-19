@@ -16,7 +16,7 @@ export function draggable(node: HTMLElement) {
       }
     })
     document.addEventListener("mouseup", function (event) {
-      drag = false;
+      drag = false;z
     });
 
     document.addEventListener("mousemove", function (event: MouseEvent) {
