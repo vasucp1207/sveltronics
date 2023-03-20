@@ -1,12 +1,18 @@
 <script>
-  import Demo from "$lib/windowSize/demo.svelte";
+  import Demo from "$lib/windowScroll/demo.svelte";
 
 </script>
 
-<Demo />
+<div>
+  <Demo />
+</div>
 
 <style lang="postcss">
-
+  div {
+    height: 200vh;
+    width: 200vw;
+  }
 </style>
 
 <!-- Todo: add return types to the functions later on -->
+<!-- onMount is very important === internal server error -->
