@@ -2,12 +2,12 @@ import { writable } from "svelte/store"
 
 export function isOutside(node: HTMLElement) {
 
-  let outside = writable(true);
+  let outside = writable<boolean>(true);
   node.addEventListener('mouseover', () => {
-    outside.set(true);
+    outside.set(false);
   })
   node.addEventListener('mouseleave', () => {
-    outside.set(false);
+    outside.set(true);
   })
 
   return outside;

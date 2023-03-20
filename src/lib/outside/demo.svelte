@@ -2,6 +2,9 @@
   import { onMount } from "svelte";
   import { isOutside } from "./index";
 
+  /**
+     * @type {HTMLElement}
+     */
   let myEle;
   let outside;
 
@@ -12,8 +15,8 @@
 
 <div
   bind:this={myEle}
-  class="m-52 w-36 h-36 bg-[#ff3e02] text-white flex justify-center items-center"
+  class="m-5 w-36 h-36 bg-[#ff3e02] text-white flex justify-center items-center"
 >
 Hover Me
 </div>
-<div>{$outside}</div>
+<div class="m-5">{$outside}</div>
