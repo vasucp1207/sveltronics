@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/windowScroll/demo.svelte";
+  import Demo from "$lib/history/demo.svelte";
 
 </script>
 
@@ -8,10 +8,10 @@
 </div>
 
 <style lang="postcss">
-  div {
+  /* div {
     height: 200vh;
     width: 200vw;
-  }
+  } */
 </style>
 
 <!-- Todo: add return types to the functions later on -->
