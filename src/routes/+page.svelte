@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/mouseInElement/demo.svelte";
+  import Demo from "$lib/windowSize/demo.svelte";
 
 </script>
 
@@ -8,3 +8,5 @@
 <style lang="postcss">
 
 </style>
+
+<!-- Todo: add return types to the functions later on -->
