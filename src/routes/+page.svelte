@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/geoLocation/demo.svelte";
+  import Demo from "$lib/showNotification/demo.svelte";
 
 </script>
 
