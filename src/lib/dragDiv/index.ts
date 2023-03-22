@@ -7,7 +7,7 @@ let yOffset: number = 0;
 let drag: boolean = false;
 export function draggable(node: HTMLElement) {
   onMount(() => {
-    node.addEventListener("mousedown", function (event: MouseEvent) {
+    node.addEventListener("mousedown", (event: MouseEvent) => {
       initialX = event.clientX - xOffset;
       initialY = event.clientY - yOffset;
 
@@ -15,11 +15,11 @@ export function draggable(node: HTMLElement) {
         drag = true;
       }
     })
-    document.addEventListener("mouseup", function (event) {
-      drag = false;z
+    document.addEventListener("mouseup", () => {
+      drag = false;
     });
 
-    document.addEventListener("mousemove", function (event: MouseEvent) {
+    document.addEventListener("mousemove", (event: MouseEvent) => {
       if (drag) {
         xOffset = event.clientX - initialX;
         yOffset = event.clientY - initialY;

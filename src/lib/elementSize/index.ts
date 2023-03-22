@@ -1,10 +1,15 @@
 import { writable } from "svelte/store";
+import type { Writable } from "svelte/store";
 
-let donw = false;
-export function elementSize(node: HTMLElement) {
+interface Dimen {
+  width: Writable<number>;
+  height: Writable<number>;
+}
 
-  let width = writable<number>(node.offsetWidth);
-  let height = writable<number>(node.offsetHeight);
+export function elementSize(node: HTMLElement): Dimen {
+
+  let width: Writable<number> = writable(node.offsetWidth);
+  let height: Writable<number> = writable(node.offsetHeight);
 
   node.addEventListener('mousedown', () => {
     width.set(node.offsetWidth);

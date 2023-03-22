@@ -1,7 +1,8 @@
 <script>
+  import { writable } from "svelte/store";
   import { useHistory } from "./index";
 
-  let count = 0;
+  let count = writable(0);
   
   let { history, undo, redo } = {};
   $: {
@@ -10,11 +11,10 @@
 </script>
 
 <div class="m-5 flex justify-center items-center flex-col">
-  <div>{count}</div>
-
+  <div>{$count}</div>
   <div>
     <button
-      on:click={() => (count += 1)}
+      on:click={() => (count.update(val => val + 1))}
       class="bg-[#ff3e00] p-1 text-white rounded border-2 w-20 h-10"
     >
       Increase
