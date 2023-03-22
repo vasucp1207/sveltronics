@@ -1,7 +1,7 @@
 <script>
   import { useLocalStorage } from "./index";
 
-  const count = useLocalStorage('count', 0);
+  let count = useLocalStorage('count', 0);
 
 </script>
 
