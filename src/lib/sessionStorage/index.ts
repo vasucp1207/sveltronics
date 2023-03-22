@@ -1,18 +1,26 @@
 import { writable } from 'svelte/store';
+import type { Writable } from 'svelte/store';
 
 type ValueType = string | number | boolean | null | undefined | object | any[];
-export function useSessionStorage<T extends ValueType>(key: string, initialValue: T): { subscribe: any; set: (value: T) => void; update: (fn: (value: T) => T) => void } {
+
+interface Store<T extends ValueType> {
+  subscribe: any;
+  set: (value: T) => void;
+  update: (fn: (value: T) => T) => void;
+}
+
+export function useSessionStorage<T extends ValueType>(key: string, initialValue: T): Store<T> {
   let storeValue: T;
 
   try {
-    const currentValue = sessionStorage.getItem(key);
+    const currentValue: string | null = sessionStorage.getItem(key);
     storeValue = currentValue ? JSON.parse(currentValue) : initialValue;
   } catch (e) {
     console.error(`Error retrieving ${key} from sessionStorage`, e);
     storeValue = initialValue;
   }
 
-  const store = writable<T>(storeValue);
+  let store: Writable<T> = writable(storeValue);
 
   store.subscribe((value) => {
     try {

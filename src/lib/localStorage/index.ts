@@ -13,7 +13,7 @@ export function useLocalStorage<T extends ValueType>(key: string, initialValue: 
   let storeValue: T;
 
   try {
-    const currentValue = localStorage.getItem(key);
+    const currentValue: string | null = localStorage.getItem(key);
     storeValue = currentValue? JSON.parse(currentValue) : initialValue;
   } catch (e) {
     console.error(`Error retrieving ${key} from localStorage`, e);
