@@ -3,10 +3,10 @@ import { onMount } from 'svelte';
 
 export function pinch(node: HTMLElement) {
   const dispatch = createEventDispatcher();
-  let scale: number = 1;
-  const minScale: number = 0.5;
-  const maxScale: number = 5;
-  const step: number = 0.05;
+  let scale = 1;
+  const minScale = 0.5;
+  const maxScale = 5;
+  const step = 0.05;
 
   onMount(() => {
     node.addEventListener('wheel', (event) => {

@@ -17,7 +17,7 @@ export function resizeable(node: HTMLElement) {
   right.style.bottom = '0';
   right.style.cursor = 'se-resize';
 
-  let startPos: { x: number, y: number } = { x: 0, y: 0 };
+  let startPos: Record<string, string> = { x: 0, y: 0 };
 
   node.appendChild(right);
 

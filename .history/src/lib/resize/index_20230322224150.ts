@@ -4,10 +4,10 @@ let down: boolean = false;
 export function resizeable(node: HTMLElement) {
   node.style.position = 'relative';
 
-  let initialHeight: number = node.offsetHeight;
-  let initialWidth: number = node.offsetWidth;
+  let initialHeight = node.offsetHeight;
+  let initialWidth = node.offsetWidth;
 
-  let right: HTMLElement = document.createElement('div');
+  let right = document.createElement('div');
 
   right.style.width = '10px';
   right.style.height = '10px';
@@ -17,7 +17,7 @@ export function resizeable(node: HTMLElement) {
   right.style.bottom = '0';
   right.style.cursor = 'se-resize';
 
-  let startPos: { x: number, y: number } = { x: 0, y: 0 };
+  let startPos = { x: 0, y: 0 };
 
   node.appendChild(right);
 
