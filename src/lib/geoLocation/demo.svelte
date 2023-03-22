@@ -1,6 +1,7 @@
 <script>
   import { geoLocation } from "./index";
   import { onMount } from "svelte";
+  
   let { latitude, longitude, watch, stop } = {};
 
   onMount(() => {

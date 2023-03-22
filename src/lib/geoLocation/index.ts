@@ -1,9 +1,18 @@
 import { writable } from "svelte/store";
+import type { Writable } from "svelte/store";
 
-export function geoLocation() {
-  let latitude = writable<number | null>(null), longitude = writable<number | null>(null);
+interface returnGeoArgs {
+  latitude: Writable<number | null>;
+  longitude: Writable<number | null>;
+  watch: () => void;
+  stop: () => void;
+}
 
-  function watch() {
+export function geoLocation(): returnGeoArgs {
+  let latitude: Writable<number | null> = writable(null);
+  let longitude: Writable<number | null> = writable(null);
+
+  const watch = (): void => {
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
         latitude.set(position.coords.latitude);
@@ -12,7 +21,7 @@ export function geoLocation() {
     }
   }
 
-  function stop() {
+  const stop = (): void => {
     latitude.set(null);
     longitude.set(null);
   }
