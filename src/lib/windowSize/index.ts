@@ -1,8 +1,14 @@
 import { writable } from "svelte/store";
+import type { Writable } from "svelte/store";
 
-export function windowSize() {
-  let width = writable<number>(window.innerWidth);
-  let height = writable<number>(window.innerHeight);
+interface windowDimen {
+  width: Writable<number>;
+  height: Writable<number>;
+}
+
+export function windowSize(): windowDimen {
+  let width: Writable<number>= writable(window.innerWidth);
+  let height: Writable<number> = writable(window.innerHeight);
 
   window.addEventListener('resize', () => {
     width.set(window.innerWidth);

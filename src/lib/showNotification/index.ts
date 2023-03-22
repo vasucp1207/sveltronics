@@ -1,4 +1,4 @@
-export async function showNotification(title, body) {
+export async function showNotification(title: string, body: string) {
   let permission = Notification.permission;
 
   if (permission === "granted") {
@@ -9,20 +9,18 @@ export async function showNotification(title, body) {
     alert("Use normal alert");
   }
 
-  function requestAndShowPermission() {
+  function requestAndShowPermission(): void {
     Notification.requestPermission(function (permission) {
       if (permission === "granted") {
         show();
       }
     });
   }
-  function show() {
+  function show(): void {
     let notification = new Notification(title, { body });
-
     notification.onclick = () => {
       notification.close();
       window.parent.focus();
     }
-
   }
 }

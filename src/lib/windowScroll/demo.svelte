@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from "svelte";
+  import { onMount } from "svelte";
   import { windowScroll } from "./index";
 
   let { x, y } = {};
