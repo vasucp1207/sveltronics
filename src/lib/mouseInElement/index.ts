@@ -1,17 +1,23 @@
 import { writable } from "svelte/store"
+import type { Writable } from "svelte/store";
 
-export function mouseInElement(node: HTMLElement) {
-  const containerRect = node.getBoundingClientRect();
+interface relativeElementPos {
+  elementX: Writable<number>;
+  elementY: Writable<number>;
+}
 
-  let elementX = writable<number>(0);
-  let elementY = writable<number>(0);
+export function mouseInElement(node: HTMLElement): relativeElementPos {
+  const containerRect: DOMRect = node.getBoundingClientRect();
 
-  node.addEventListener('mouseover', (e) => {
+  let elementX: Writable<number> = writable(0);
+  let elementY: Writable<number> = writable(0);
+
+  node.addEventListener('mouseover', (e: MouseEvent) => {
     elementX.set(e.clientX - containerRect.left);
     elementY.set(e.clientY - containerRect.top);
   })
 
-  node.addEventListener('mousemove', (e) => {
+  node.addEventListener('mousemove', (e: MouseEvent) => {
     elementX.set(e.clientX - containerRect.left);
     elementY.set(e.clientY - containerRect.top);
   })
