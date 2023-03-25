@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/longPress/demo.svelte";
+  import Demo from "$lib/asyncState/demo.svelte";
 
 </script>
 
