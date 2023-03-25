@@ -19,7 +19,7 @@ export async function asyncState(request: asyncRequest) {
     value.set(JSON.stringify(res));
     isLoading.set(false);
   } catch (error) {
-    state.set(`${error}`);
+    state.set(error);
     isLoading.set(false);
   }
 
