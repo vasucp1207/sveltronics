@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/visiblity/demo.svelte";
+  import Demo from "$lib/useWindowSize/demo.svelte";
 
 </script>
 
@@ -9,7 +9,7 @@
 
 <style lang="postcss">
   div {
-    height: 200vh;
+    /* height: 200vh; */
     /* width: 200vw; */
   }
 </style>
