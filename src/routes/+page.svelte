@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/useWindowSize/demo.svelte";
+  import Demo from "$lib/keyStroke/demo.svelte";
 
 </script>
 
