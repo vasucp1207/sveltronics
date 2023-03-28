@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/keyStroke/demo.svelte";
+  import Demo from "$lib/infiniteScroll/demo.svelte";
 
 </script>
 
