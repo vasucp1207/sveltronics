@@ -1,12 +1,8 @@
 <script>
   import { useFlip } from "./index";
-
-  // let { front, flip } = useFlip();
-
-  // $: console.log($front, 'front', flip)
+  
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
   use:useFlip
   class="flip m-32 rounded h-80 w-60 text-white flex justify-center items-center"
