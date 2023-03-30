@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/parallax/demo.svelte";
+  import Demo from "$lib/useFlip/demo.svelte";
 
 </script>
 
