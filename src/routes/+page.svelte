@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/useFlip/demo.svelte";
+  import Demo from "$lib/scrollToBottom/demo.svelte";
 
 </script>
 
