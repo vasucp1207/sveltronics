@@ -8,7 +8,7 @@ export function resizeable(node: HTMLElement) {
   let initialWidth: number = node.offsetWidth;
 
   let right: HTMLElement = document.createElement('div');
-
+  
   right.style.width = '10px';
   right.style.height = '10px';
   right.style.background = "transparent";
@@ -41,11 +41,11 @@ export function resizeable(node: HTMLElement) {
         const dx = e.clientX - startPos.x;
         const dy = e.clientY - startPos.y;
 
-        if (node.offsetWidth + dx > initialWidth) {
+        if (node.offsetWidth + dx >= initialWidth) {
           node.style.width = `${node.offsetWidth + dx}px`;
           startPos.x = e.clientX;
         }
-        if(node.offsetHeight + dy > initialHeight) {
+        if(node.offsetHeight + dy >= initialHeight) {
           node.style.height = `${node.offsetHeight + dy}px`;
           startPos.y = e.clientY;
         }

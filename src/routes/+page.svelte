@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/useTooltip/demo.svelte";
+  import Demo from "$lib/useCounter/demo.svelte";
 
 </script>
 
