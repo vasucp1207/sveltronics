@@ -1,5 +1,5 @@
 <script>
-  import Demo from "$lib/useCounter/demo.svelte";
+  import Demo from "$lib/useCycleList/demo.svelte";
 
 </script>
 
