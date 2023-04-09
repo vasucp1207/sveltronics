@@ -1,4 +1,4 @@
-export function useMemoize(fn) {
+export function useCached(fn) {
   const cache = new Map();
   let result;
 

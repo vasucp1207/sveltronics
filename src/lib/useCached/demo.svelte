@@ -1,12 +1,12 @@
 <script>
-  import { useMemoize } from './index';
+  import { useCached } from './index';
 
   const add = (a, b) => {
     console.log('Adding:', a, b);
     return a + b;
   };
 
-  const memoizedAdd = useMemoize(add);
+  const memoizedAdd = useCached(add);
 </script>
 
 <div>
