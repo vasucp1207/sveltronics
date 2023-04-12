@@ -1,6 +1,6 @@
 {
-	"name": "svelte-use-helpers",
-	"version": "0.0.4",
+	"name": "sveltronics",
+	"version": "0.0.6",
 	"private": false,
 	"scripts": {
 		"dev": "vite dev",
@@ -31,6 +31,6 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/package": "^2.0.2",
-		"svelte-use-helpers": "^0.0.4"
+		"sveltronics": "^0.0.6"
 	}
 }

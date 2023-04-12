@@ -1,5 +1,5 @@
 <script>
-  import { draggable, useLocalStorage, setDrag } from 'svelte-use-helpers';
+  import { draggable, useLocalStorage, setDrag } from 'sveltronics';
 
   let like = useLocalStorage('like', 0);
 
