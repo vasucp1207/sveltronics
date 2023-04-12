@@ -1,6 +1,7 @@
-![library-icon](/static/icon.png)
+<img width="1000" alt="lib-icon" src="https://user-images.githubusercontent.com/85363195/231576778-4db4f8fc-6fe3-4234-869a-6898f5f4cacf.png">
+
 <h1 align="center">Sveltronics</h1>
-<h2 align="center">Svelte utility functions for your project.</h2>
+<h2 align="center">Svelte utility functions for your project</h2>
 
 # 📦Installation
 
