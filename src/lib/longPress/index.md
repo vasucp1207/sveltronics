@@ -1,10 +1,14 @@
+# longPress
+
+`longPress` is a Svelte custom action that adds long press functionality to an element.
+
+## Usage
+
+```js
 <script>
   import { onMount } from "svelte";
-  import { longPress } from "./index";
+  import { longPress } from "sveltronics";
 
-  /**
-     * @type {HTMLElement}
-     */
   let tarEle;
   let currVal = false;
 
@@ -17,7 +21,8 @@
   })
 </script>
 
-<div class="ml-7 mt-5">{currVal}</div>
-<button bind:this={tarEle} class="ml-5 bg-[#ff3e00] text-white rounded border-2 w-32 h-10">
+<div>{currVal}</div>
+<button bind:this={tarEle}>
   Press(1000ms)
 </button>
+```

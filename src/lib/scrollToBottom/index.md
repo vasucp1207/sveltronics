@@ -1,5 +1,12 @@
+# scrollToBottom
+
+`scrollToBottom` is a custom Svelte function that helps to scroll to the bottom of a container element.
+
+## Usage
+
+```js
 <script>
-  import { scrollToBottom } from "./index";
+  import { scrollToBottom } from "sveltronics";
 
 
   let id = 0;
@@ -21,25 +28,19 @@
   }
 </script>
 
-<div class="flex justify-center">
-  <div class="flex mt-16 flex-col items-center w-80 gap-6">
+<div>
+  <div>
     <div>
-      <input
-        class="border-2 p-1 rounded border-[#ff3e00] focus:outline-none"
-        bind:value={text}
-      />
-      <button
-        class="border-2 p-2 bg-[#ff3e00] text-white rounded "
-        on:click={addTodo}>Add Todo</button
-      >
+      <input bind:value={text} />
+      <button on:click={addTodo}>Add Todo</button>
     </div>
 
-    <div 
-      use:scrollToBottom
-      class="border-2 w-[100%] h-44 overflow-scroll flex flex-col gap-1">
+    <div use:scrollToBottom>
       {#each todos as todo (todo.id)}
-        <div class="bg-[#e5e7eb] p-1 h-8 w-full">{todo.text}</div>
+        <div>{todo.text}</div>
       {/each}
     </div>
   </div>
 </div>
+
+```

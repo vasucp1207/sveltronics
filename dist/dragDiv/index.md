@@ -6,12 +6,9 @@ Makes an element draggable.
 
 ```ts
 <script>
-  import { draggable } from '';
+  import { draggable } from 'sveltronics';
 
 </script>
 
-<div 
-  use:draggable>
-  Drag Me
-</div>
+<div use:draggable>Drag Me</div>
 ```

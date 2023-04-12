@@ -4,14 +4,11 @@ Makes an element draggable.
 
 ## Usage
 
-```ts
+```js
 <script>
   import { draggable } from 'sveltronics';
 
 </script>
 
-<div 
-  use:draggable>
-  Drag Me
-</div>
+<div use:draggable>Drag Me</div>
 ```
