@@ -4,7 +4,7 @@ It is a utility function that listens for clicks outside of a designated element
 
 ## Usage
 
-```ts
+```js
 <script>
   import { clickOutside } from 'sveltronics';
 

@@ -4,7 +4,7 @@ Makes an element draggable.
 
 ## Usage
 
-```ts
+```js
 <script>
   import { draggable } from 'sveltronics';
 

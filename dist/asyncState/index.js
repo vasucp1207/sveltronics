@@ -10,7 +10,7 @@ export async function asyncState(request) {
         isLoading.set(false);
     }
     catch (error) {
-        state.set(error);
+        state.set('rejected');
         isLoading.set(false);
     }
     return {
