@@ -1,7 +1,6 @@
-import { onMount, onDestroy, tick } from 'svelte'
-import { writable, type Writable } from 'svelte/store'
+import { writable, type Writable } from 'svelte/store';
 
-export function useElementVisibility(node: HTMLElement): Writable<boolean> {
+export function elementVisibility(node: HTMLElement): Writable<boolean> {
   const isVisible = writable(false)
 
   const updateVisibility = () => {

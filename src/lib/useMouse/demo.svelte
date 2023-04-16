@@ -1,7 +1,7 @@
 <script>
-  import { useMouse } from "./index";
+  import { mousePos } from "./index";
 
-  let { x, y } = useMouse();
+  let { x, y } = mousePos();
 </script>
 
 <p>pos: {$x}, {$y}</p>

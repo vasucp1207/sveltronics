@@ -1,6 +1,4 @@
-import { writable, type Writable } from "svelte/store";
-
-export function useFlip(node?: HTMLElement) {
+export function flip(node?: HTMLElement) {
   if (node) {
     let content = node.querySelector('.content');
     let front = node.querySelector('.front');

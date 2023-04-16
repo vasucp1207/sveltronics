@@ -8,7 +8,7 @@ interface returnArgs {
   reset: () => void
 }
 
-export function useCounter(initialValue: number): returnArgs {
+export function counter(initialValue: number): returnArgs {
   let count = writable<number>(initialValue);
   
   return {

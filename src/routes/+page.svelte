@@ -1,5 +1,5 @@
 <script>
-  import Demo from "../lib/useCached/demo.svelte";
+  import Demo from "../lib/windowSize/demo.svelte";
 
 </script>
 

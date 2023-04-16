@@ -19,7 +19,6 @@
   {memoizedAdd(2, 3)}
   {memoizedAdd(1, 2)}
   {memoizedAdd(2, 3)}
-  {clear}
   {memoizedAdd(1, 2)}
   {memoizedAdd(2, 3)}
 </div>

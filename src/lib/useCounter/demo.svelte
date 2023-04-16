@@ -1,7 +1,7 @@
 <script>
-  import { useCounter } from "./index";
+  import { counter } from "./index";
 
-  let { count, inc, dec, set, reset } = useCounter(1);
+  let { count, inc, dec, set, reset } = counter(1);
 
 </script>
 

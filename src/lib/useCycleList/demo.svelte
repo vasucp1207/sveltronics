@@ -1,9 +1,10 @@
 <script>
-  import { useCycleList } from "./index";
+  import { cycleList } from "./index";
 
-  let list = [1, 2, 3, 4, 5];
+  let list = [10, 20, 30, 40, 50];
 
-  let { state, next, prev } = useCycleList(list);
+  let { state, next, prev } = cycleList(list);
+  console.log($state)
 </script>
 
 <div class="m-5 flex items-center gap-4">

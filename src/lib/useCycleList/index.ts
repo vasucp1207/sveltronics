@@ -6,7 +6,7 @@ interface returnArgs {
   prev: () => void
 }
 
-export function useCycleList(list: any[]): returnArgs {
+export function cycleList(list: any[]): returnArgs {
   let listLength: number = list.length;
   let index = writable<number>(0);
   const state = writable<any>(list[0]);

@@ -7,7 +7,7 @@ interface mousePos {
   y: Writable<number>;
 }
 
-export function useMouse(): mousePos {
+export function mousePos(): mousePos {
   const x: Writable<number> = writable(0);
   const y: Writable<number> = writable(0);
 
