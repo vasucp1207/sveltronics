@@ -1,5 +1,5 @@
 <script>
-  import { resizeable } from "./index";
+  import { resizable } from "./index";
   import { elementSize } from "../elementSize/index";
   import { onMount } from "svelte";
 
@@ -16,10 +16,10 @@
 
 <div 
   bind:this={myEle}
-  use:resizeable
+  use:resizable
   class="m-5 w-36 h-36 bg-[#ff3e02] text-white flex justify-center items-center"
 >
-  Resizeable
+  Resizable
 </div>
 
 <div class="m-5">Height: {$height}</div>

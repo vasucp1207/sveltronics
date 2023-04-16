@@ -1,8 +1,11 @@
-export function parallax(node: HTMLElement) {
-  let perspective: number = 700;
-  let delta: number = 10;
+export function parallax(
+  node: HTMLElement,
+  options: number[] | null
+) {
+  let perspective: number = options?.length === 2? options[0]: 700;
+  let delta: number = options?.length === 2? options[1]: 10;
   
-  const parallaxEffect = (e) => {
+  const parallaxEffect = (e: MouseEvent) => {
     const pos = e.currentTarget.getBoundingClientRect();
     const cursPosX = e.pageX - pos.left;
     const cursPosY = e.pageY - pos.top;

@@ -13,13 +13,13 @@ export function mouseInElement(node: HTMLElement): relativeElementPos {
   let elementY: Writable<number> = writable(0);
 
   node.addEventListener('mouseover', (e: MouseEvent) => {
-    elementX.set(e.clientX - containerRect.left);
-    elementY.set(e.clientY - containerRect.top);
+    elementX.set(e.pageX - containerRect.left);
+    elementY.set(e.pageY - containerRect.top);
   })
 
   node.addEventListener('mousemove', (e: MouseEvent) => {
-    elementX.set(e.clientX - containerRect.left);
-    elementY.set(e.clientY - containerRect.top);
+    elementX.set(e.pageX - containerRect.left);
+    elementY.set(e.pageY - containerRect.top);
   })
 
   return { elementX, elementY };

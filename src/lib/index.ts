@@ -1,7 +1,7 @@
 export { draggable } from './dragDiv/index';
 export { asyncState } from './asyncState/index';
 export { clickOutside } from './clickOutside/index';
-export { setDrag } from './dragSet/index';
+export { setDraggable } from './dragSet/index';
 export { elementSize } from './elementSize/index';
 export { geoLocation } from './geoLocation/index';
 export { useHistory } from './history/index';
@@ -14,7 +14,7 @@ export { isOutside } from './outside/index';
 export { parallax } from './parallax/index';
 export { pinch } from './pinch/index';
 export { pixelate } from './pixelate/index';
-export { resizeable } from './resize/index';
+export { resizable } from './resize/index';
 export { scrollToBottom } from './scrollToBottom/index';
 export { useSessionStorage } from './sessionStorage/index';
 export { showNotification } from './showNotification/index';

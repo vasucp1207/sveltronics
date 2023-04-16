@@ -1,7 +1,7 @@
 import { onMount } from "svelte";
 
 let down: boolean = false;
-export function resizeable(node: HTMLElement) {
+export function resizable(node: HTMLElement) {
   node.style.position = 'relative';
 
   let initialHeight: number = node.offsetHeight;

@@ -3,13 +3,7 @@ import type { Writable } from 'svelte/store';
 
 type ValueType = string | number | boolean | object | any[];
 
-interface Store<T extends ValueType> {
-  subscribe: any;
-  set: (value: T) => void;
-  update: (fn: (value: T) => T) => void;
-}
-
-export function useLocalStorage<T extends ValueType>(key: string, initialValue: T): Store<T> {
+export function useLocalStorage<T extends ValueType>(key: string, initialValue: T): Writable<T> {
   let storeValue: T;
 
   try {

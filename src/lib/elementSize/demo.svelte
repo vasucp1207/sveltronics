@@ -6,13 +6,13 @@
      * @type {HTMLElement}
      */
   let myEle;
-  let { height, width } = {};
+  let height, width;
   onMount(() => {
     ({ height, width } = elementSize(myEle));
   })
 
 </script>
 
-<textarea bind:this={myEle} class="m-5 border-2" />
+<textarea bind:this={myEle} class="m-5 border-2 resize" />
 <div class="m-5">Height: {$height}</div>
 <div class="m-5">Width: {$width}</div>

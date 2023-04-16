@@ -14,7 +14,6 @@ export function pinch(node: HTMLElement) {
       const direction = event.deltaY < 0 ? 1 : -1;
       scale = Math.min(maxScale, Math.max(minScale, scale + direction * step));
       node.style.transform = `scale(${scale})`;
-      dispatch('scale', { scale });
     });
   })
 }

@@ -6,7 +6,7 @@ export async function showNotification(title: string, body: string) {
   } else if (permission === "default") {
     requestAndShowPermission();
   } else {
-    alert("Use normal alert");
+    alert("Permisson rejected");
   }
 
   function requestAndShowPermission(): void {

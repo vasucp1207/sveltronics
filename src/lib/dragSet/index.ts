@@ -5,7 +5,7 @@ let initialY: number;
 let xOffset: number = 0;
 let yOffset: number = 0;
 let drag: boolean = false;
-export function setDrag(node: HTMLElement) {
+export function setDraggable(node: HTMLElement) {
   const element = document.createElement('div');
   const rect: DOMRect = node.getBoundingClientRect();
   element.style.transform = `translate3d(${rect.x}px, ${rect.y}px, 0)`;
