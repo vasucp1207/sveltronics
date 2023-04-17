@@ -35,4 +35,3 @@ npm i sveltronics
 <div>Width: {$width}</div>
 ```
 
-See the [demos](https://github.com/vasucp1207/svelte-use/tree/master/src/lib) for using a particular utility functions.
