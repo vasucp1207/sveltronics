@@ -1,6 +1,5 @@
-import { onMount } from "svelte";
-let down = false;
 export function resizable(node) {
+    let down = false;
     node.style.position = 'relative';
     let initialHeight = node.offsetHeight;
     let initialWidth = node.offsetWidth;
@@ -14,34 +13,32 @@ export function resizable(node) {
     right.style.cursor = 'se-resize';
     let startPos = { x: 0, y: 0 };
     node.appendChild(right);
-    onMount(() => {
-        right.addEventListener('mouseover', (e) => {
-            right.style.background = "blue";
-        });
-        right.addEventListener('mouseleave', (e) => {
-            right.style.background = "transparent";
-        });
-        right.addEventListener('mousedown', (e) => {
-            down = true;
-            startPos.x = e.clientX;
-            startPos.y = e.clientY;
-        });
-        document.addEventListener('mousemove', (e) => {
-            if (down) {
-                const dx = e.clientX - startPos.x;
-                const dy = e.clientY - startPos.y;
-                if (node.offsetWidth + dx >= initialWidth) {
-                    node.style.width = `${node.offsetWidth + dx}px`;
-                    startPos.x = e.clientX;
-                }
-                if (node.offsetHeight + dy >= initialHeight) {
-                    node.style.height = `${node.offsetHeight + dy}px`;
-                    startPos.y = e.clientY;
-                }
+    right.addEventListener('mouseover', (e) => {
+        right.style.background = "blue";
+    });
+    right.addEventListener('mouseleave', (e) => {
+        right.style.background = "transparent";
+    });
+    right.addEventListener('mousedown', (e) => {
+        down = true;
+        startPos.x = e.clientX;
+        startPos.y = e.clientY;
+    });
+    document.addEventListener('mousemove', (e) => {
+        if (down) {
+            const dx = e.clientX - startPos.x;
+            const dy = e.clientY - startPos.y;
+            if (node.offsetWidth + dx >= initialWidth) {
+                node.style.width = `${node.offsetWidth + dx}px`;
+                startPos.x = e.clientX;
             }
-        });
-        document.addEventListener('mouseup', () => {
-            down = false;
-        });
+            if (node.offsetHeight + dy >= initialHeight) {
+                node.style.height = `${node.offsetHeight + dy}px`;
+                startPos.y = e.clientY;
+            }
+        }
+    });
+    document.addEventListener('mouseup', () => {
+        down = false;
     });
 }
