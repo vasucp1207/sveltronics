@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { windowScroll } from "./index";
 
-  let { x, y } = {};
+  let x, y;
   
   onMount(() => {
     ({ x, y } = windowScroll());

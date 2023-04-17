@@ -2,7 +2,7 @@
   import { windowSize } from "./index";
   import { onMount } from "svelte";
 
-  let { width, height } = {};
+  let width, height;
   onMount(() => {
     ({ width, height} = windowSize());
   })

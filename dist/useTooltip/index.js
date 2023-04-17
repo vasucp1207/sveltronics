@@ -1,11 +1,11 @@
-export function useTooltip(node, content) {
+export function tooltip(node, content) {
     node.style.position = 'relative';
     let tip = document.createElement('div');
     let after = document.createElement('div');
     node.appendChild(tip);
     tip.style.position = 'absolute';
     tip.style.background = '#555';
-    tip.style.width = '120px';
+    tip.style.width = 'max-content';
     tip.style.padding = '5px';
     tip.style.textAlign = 'center';
     tip.style.zIndex = '10';

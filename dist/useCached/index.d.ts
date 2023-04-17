@@ -1,1 +1,4 @@
-export declare function useCached(fn: any): (...args: any[]) => any;
+export declare function cached(fn: Function): {
+    (...args: any[]): any;
+    clearCache(...args: any[]): void;
+};

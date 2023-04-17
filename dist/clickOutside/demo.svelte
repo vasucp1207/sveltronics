@@ -1,10 +1,27 @@
 <script>
-  import { clickOutside } from './index';
+  import { clickOutside } from "./index";
 
+  let show = false;
+
+  function toogle() {
+    show = !show;
+  }
 </script>
 
-<div use:clickOutside class="m-5 h-[100px] w-[100px] bg-[#ff3e00] border-2 
-  rounded text-white flex justify-center items-center"
+<button
+  on:click={() => show = true}
+  class="bg-[#ff3e00] m-5 text-white p-2 rounded border-2"
 >
-  Outside
-</div>
+  Show Modal
+</button>
+
+{#if show}
+  <div
+    use:clickOutside
+    on:clickOutsideDispatch={toogle}
+    class="absolute top-[30%] left-[30%] border-2 w-48 h-40 flex justify-center 
+    border-[#363535] rounded items-center"
+  >
+    Modal
+  </div>
+{/if}

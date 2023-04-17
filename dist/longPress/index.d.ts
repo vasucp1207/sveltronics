@@ -1,1 +1,1 @@
-export declare function longPress(target: HTMLElement, callback: (e: MouseEvent) => void): void;
+export declare function longPress(target: HTMLElement, timer: number): void;

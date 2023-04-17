@@ -6,7 +6,7 @@
      * @type {HTMLElement}
      */
   let myEle;
-  let { elementX, elementY } = {};
+  let elementX, elementY;
   onMount(() => {
     ({ elementX, elementY } = mouseInElement(myEle));
   })

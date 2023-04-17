@@ -1,1 +1,1 @@
-export declare function resizeable(node: HTMLElement): void;
+export declare function resizable(node: HTMLElement): void;

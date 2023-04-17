@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-export function useCycleList(list) {
+export function cycleList(list) {
     let listLength = list.length;
     let index = writable(0);
     const state = writable(list[0]);

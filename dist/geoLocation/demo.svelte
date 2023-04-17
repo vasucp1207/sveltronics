@@ -2,17 +2,21 @@
   import { geoLocation } from "./index";
   import { onMount } from "svelte";
   
-  let { latitude, longitude, watch, stop } = {};
+  let coords, watch, stop;
 
   onMount(() => {
-    ({ latitude, longitude, watch, stop } = geoLocation())
+    ({ coords, watch, stop } = geoLocation());
   })
-
 </script>
 
 <div class="m-5">
-  <div>Latitude: {$latitude}</div>
-  <div>Longitude: {$longitude}</div>
+  <div>Accuracy: {$coords?.accuracy}</div>
+  <div>Latitude: {$coords?.latitude}</div>
+  <div>Longitude: {$coords?.longitude}</div>
+  <div>Altitude: {$coords?.altitude}</div>
+  <div>AltitudeAccuracy: {$coords?.altitudeAccuracy}</div>
+  <div>Heading: {$coords?.heading}</div>
+  <div>Speed: {$coords?.speed}</div>
 
   <div class="mt-3 -ml-1">
     <button

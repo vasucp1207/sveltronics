@@ -1,5 +1,5 @@
 <script>
-  import { useCloned } from "./index";
+  import { cloned } from "./index";
 
   let user = {
     name: 'Mark',
@@ -8,9 +8,9 @@
     }
   }
 
-  let cloneObj = useCloned(user);
+  let cloneObj = cloned(user);
 </script>
 
 <div>
-  {JSON.stringify(cloneObj)}
+  {cloneObj}
 </div>

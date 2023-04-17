@@ -1,6 +1,6 @@
 {
 	"name": "sveltronics",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"private": false,
 	"scripts": {
 		"dev": "vite dev",
@@ -31,6 +31,6 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/package": "^2.0.2",
-		"sveltronics": "^0.0.6"
+		"sveltronics": "^0.0.10"
 	}
 }

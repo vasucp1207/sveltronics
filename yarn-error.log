@@ -1,0 +1,65 @@
+Arguments: 
+  /opt/homebrew/Cellar/node/18.11.0/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js global bin
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/vasu/.nvm/versions/node/v14.18.1/bin:./bin:/usr/local/sbin:/Users/vasu/.dotfiles/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/vasu/.cargo/bin:/Users/vasu/.gem/ruby/2.6.0/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.11.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/vasu/ssg/svelte-use/package.json: Unexpected token } in JSON at position 808
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+  	"name": "sveltronics",
+  	"version": "0.0.10",
+  	"private": false,
+  	"scripts": {
+  		"dev": "vite dev",
+  		"build": "vite build",
+  		"preview": "vite preview",
+  		"package": "svelte-package",
+  		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+  		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+  	},
+  	"exports": {
+  		".": {
+  			"types": "./dist/index.d.ts",
+  			"svelte": "./dist/index.js"
+  		}
+  	},
+  	"devDependencies": {
+  		"@sveltejs/adapter-auto": "^2.0.0",
+  		"@sveltejs/kit": "^1.5.0",
+  		"autoprefixer": "^10.4.14",
+  		"postcss": "^8.4.21",
+  		"svelte": "^3.54.0",
+  		"svelte-check": "^3.0.1",
+  		"tailwindcss": "^3.2.7",
+  		"tslib": "^2.4.1",
+  		"typescript": "^4.9.3",
+  		"vite": "^4.0.0"
+  	},
+  	"type": "module",
+  	"dependencies": {
+  		"@sveltejs/package": "^2.0.2",
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

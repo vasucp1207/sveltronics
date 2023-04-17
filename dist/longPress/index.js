@@ -1,17 +1,18 @@
 let down = false;
-export function longPress(target, callback) {
-    let timer = null;
+export function longPress(target, timer) {
+    let watcher;
     target.addEventListener('mousedown', (e) => {
         down = true;
         if (e.target === target && down) {
-            timer = setTimeout(() => {
-                if (down)
-                    callback(e);
-            }, 1000);
+            watcher = setTimeout(() => {
+                if (down) {
+                    target.dispatchEvent(new CustomEvent('longPressCallback'));
+                }
+            }, timer);
         }
     });
     document.addEventListener('mouseup', () => {
         down = false;
-        clearTimeout(timer);
+        clearTimeout(watcher);
     });
 }

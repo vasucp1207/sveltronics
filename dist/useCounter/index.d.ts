@@ -6,5 +6,5 @@ interface returnArgs {
     set: (value: number) => void;
     reset: () => void;
 }
-export declare function useCounter(initialValue: number): returnArgs;
+export declare function counter(initialValue: number): returnArgs;
 export {};

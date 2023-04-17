@@ -1,5 +1,5 @@
 <script>
-  import { useElementVisibility } from "./index";
+  import { elementVisibility } from "./index";
   import { onMount } from "svelte";
 
   /**
@@ -9,7 +9,7 @@
   let isVisible;
 
   onMount(() => {
-    isVisible = useElementVisibility(myEle);
+    isVisible = elementVisibility(myEle);
   })
   
 </script>

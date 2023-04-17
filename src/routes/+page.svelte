@@ -1,6 +1,7 @@
 <script>
-  import Demo from "../lib/windowSize/demo.svelte";
+  import Demo from "../lib/scrollToBottom/demo.svelte";
 
 </script>
 
+<a href="/demo">Demo</a>
 <Demo />

@@ -1,1 +1,1 @@
-export declare function keyStroke(node: HTMLElement): void;
+export declare function keyStroke(node: HTMLElement, moveBy: number): void;

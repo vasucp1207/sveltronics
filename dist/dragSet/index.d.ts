@@ -1,1 +1,1 @@
-export declare function setDrag(node: HTMLElement): void;
+export declare function setDraggable(node: HTMLElement): void;

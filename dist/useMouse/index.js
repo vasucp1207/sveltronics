@@ -1,6 +1,6 @@
 import { onMount } from 'svelte';
 import { writable } from 'svelte/store';
-export function useMouse() {
+export function mousePos() {
     const x = writable(0);
     const y = writable(0);
     const handleMouseMove = (e) => {

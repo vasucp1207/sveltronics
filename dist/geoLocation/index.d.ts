@@ -1,7 +1,6 @@
 import type { Writable } from "svelte/store";
 interface returnGeoArgs {
-    latitude: Writable<number | null>;
-    longitude: Writable<number | null>;
+    coords: Writable<object>;
     watch: () => void;
     stop: () => void;
 }

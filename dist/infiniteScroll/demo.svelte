@@ -4,11 +4,11 @@
   let items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   $: {
-    console.log(items.length)
+    console.log(items.length);
   }
 
   const loadMore = () => {
-    items = [...items, ...Array.from({ length: 5 }).map((_, i) => items.length + i + 1)];
+    items = [...items, ...Array.from({ length: 2 }).map((_, i) => items.length + i + 1)];
   }
 </script>
 

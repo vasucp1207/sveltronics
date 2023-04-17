@@ -1,17 +1,21 @@
-export function useCached(fn) {
+export function cached(fn) {
     const cache = new Map();
     let result;
-    return (...args) => {
+    const memoized = (...args) => {
         const cacheKey = args.join('-');
         if (cache.has(cacheKey)) {
             result = (cache.get(cacheKey));
         }
         else {
             const value = fn(...args);
-            console.log(value, 'value');
             cache.set(cacheKey, value);
             result = (value);
         }
         return result;
     };
+    memoized.clearCache = (...args) => {
+        const cacheKey = args.join('-');
+        cache.delete(cacheKey);
+    };
+    return memoized;
 }

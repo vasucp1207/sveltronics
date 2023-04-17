@@ -1,3 +1,3 @@
-export function useCloned(obj) {
-    return JSON.parse(JSON.stringify(obj));
+export function cloned(obj) {
+    return JSON.stringify(JSON.parse(JSON.stringify(obj)));
 }

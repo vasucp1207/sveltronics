@@ -1,8 +1,8 @@
 <script>
   import { showNotification } from "./index";
 
-  let title = "Svelte-use";
-  let body = "Learn by doing";
+  let title = "Sveltronics";
+  let body = "Easy to use utilities";
 </script>
 
 <button

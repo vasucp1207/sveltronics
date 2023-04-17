@@ -1,7 +1,7 @@
 export function clickOutside(node) {
     const handleClick = (event) => {
-        if (node !== event.target) {
-            alert("outside click 🥳");
+        if (node && (!node.contains(event.target))) {
+            node.dispatchEvent(new CustomEvent('clickOutsideDispatch'));
         }
     };
     document.addEventListener("click", handleClick, true);

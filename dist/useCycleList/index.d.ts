@@ -4,5 +4,5 @@ interface returnArgs {
     next: () => void;
     prev: () => void;
 }
-export declare function useCycleList(list: any[]): returnArgs;
+export declare function cycleList(list: any[]): returnArgs;
 export {};

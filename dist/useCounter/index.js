@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-export function useCounter(initialValue) {
+export function counter(initialValue) {
     let count = writable(initialValue);
     return {
         count,

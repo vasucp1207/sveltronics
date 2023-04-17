@@ -5,19 +5,19 @@
   /**
      * @type {HTMLElement}
      */
-  let tarEle;
   let currVal = false;
 
-  const onLongPressCallback = (e) => {
+  const toogle = () => {
     currVal = !currVal;
   }
 
-  onMount(() => {
-    const hold = longPress(tarEle, onLongPressCallback);
-  })
 </script>
 
 <div class="ml-7 mt-5">{currVal}</div>
-<button bind:this={tarEle} class="ml-5 bg-[#ff3e00] text-white rounded border-2 w-32 h-10">
-  Press(1000ms)
+<button 
+  use:longPress={1000}
+  on:longPressCallback={toogle}
+  class="ml-5 bg-[#ff3e00] text-white rounded border-2 p-2"
+>
+  Press(1000ms default)
 </button>

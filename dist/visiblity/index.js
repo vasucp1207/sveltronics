@@ -1,6 +1,5 @@
-import { onMount, onDestroy, tick } from 'svelte';
 import { writable } from 'svelte/store';
-export function useElementVisibility(node) {
+export function elementVisibility(node) {
     const isVisible = writable(false);
     const updateVisibility = () => {
         const rect = node.getBoundingClientRect();

@@ -34,7 +34,7 @@
       >
     </div>
 
-    <div 
+    <div
       use:scrollToBottom
       class="border-2 w-[100%] h-44 overflow-scroll flex flex-col gap-1">
       {#each todos as todo (todo.id)}

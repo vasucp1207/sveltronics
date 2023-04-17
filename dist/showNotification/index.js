@@ -7,7 +7,7 @@ export async function showNotification(title, body) {
         requestAndShowPermission();
     }
     else {
-        alert("Use normal alert");
+        alert("Permisson rejected");
     }
     function requestAndShowPermission() {
         Notification.requestPermission(function (permission) {

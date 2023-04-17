@@ -1,1 +1,1 @@
-export declare function useFlip(node?: HTMLElement): void;
+export declare function flip(node?: HTMLElement): void;

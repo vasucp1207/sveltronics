@@ -1,6 +1,6 @@
-export function parallax(node) {
-    let perspective = 700;
-    let delta = 10;
+export function parallax(node, options) {
+    let perspective = options?.length === 2 ? options[0] : 700;
+    let delta = options?.length === 2 ? options[1] : 10;
     const parallaxEffect = (e) => {
         const pos = e.currentTarget.getBoundingClientRect();
         const cursPosX = e.pageX - pos.left;

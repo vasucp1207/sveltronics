@@ -1,1 +1,1 @@
-export declare function useCloned(obj: object): any;
+export declare function cloned(obj: object): string;

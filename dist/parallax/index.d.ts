@@ -1,1 +1,1 @@
-export declare function parallax(node: HTMLElement): void;
+export declare function parallax(node: HTMLElement, options: number[] | null): void;
